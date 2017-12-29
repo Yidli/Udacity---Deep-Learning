@@ -1,0 +1,9 @@
+
+cd documents/github/Udacity---Deep-Learning/dog_project
+
+virtualenv --system-site-packages /tensorflow/
+source ~/tensorflow/bin/activate 
+
+KERAS_BACKEND=tensorflow python -c "from keras import backend"
+
+jupyter notebook dog_app.ipynb

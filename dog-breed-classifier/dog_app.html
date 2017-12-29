@@ -14419,6 +14419,9 @@ test_{network} = bottleneck_features['test']</code></pre>
 </code></pre>
 <p><strong>Question 5:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  Describe why you think the architecture is suitable for the current problem.</p>
 <p><strong>Answer:</strong></p>
+<p>To make use of what the network already understood from previous training, I leveraged the current resnet weights and make that an input into the global average pooling layer.
+I added a layer in the middle of 150 units (randomly selected, larger than 133) with relu function, and kept a dropout ratio at 0.4 to improve the performance.
+The final layer was with an output of 133 units because there are 133 dognames. I used the softmax function.</p>
 
 </div>
 </div>
